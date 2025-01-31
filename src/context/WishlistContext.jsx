@@ -8,6 +8,7 @@ export let WishlistContext = createContext();
 export default function WishlistContextProvider({children}){
     const [wishlist, setWishlist,isInWishlist] = useState([]);
     const headers = {'token': localStorage.getItem('userToken')}
+    console.log('headers',headers)
     async function addToWishlist(productId) {
         let {data} = await axios.post(`https://ecommerce.routemisr.com/api/v1/wishlist`,{productId},{headers})
         if(checkInWishlist(productId)){
