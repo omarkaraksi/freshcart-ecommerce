@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://omarkaraksi.github.io/freshcart-ecommerce",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
