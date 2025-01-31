@@ -23,6 +23,11 @@ import  { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import WishlistContextProvider from './context/WishlistContext.jsx'
 import Wishlist from './Components/Wishlist/Wishlist.jsx'
 
+
+const baseURL = import.meta.env.VITE_BASE_URL || "/freshcart-ecommerce/";
+
+// const baseURL = process.env.REACT_APP_BASE_URL || "/freshcart-ecommerce/";
+
 let routers = createBrowserRouter([{
   path:'' , element : <Layout/>,children:[
     {path:'register' , element: <Register/>},
@@ -44,7 +49,7 @@ let routers = createBrowserRouter([{
     
     {path:'*' , element: <NotFound/>},
   ]
-}])
+}], { basename: baseURL })
 
 const query = new QueryClient()
 function App() {
