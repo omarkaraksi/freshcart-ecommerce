@@ -29,7 +29,7 @@ const baseURL = import.meta.env.VITE_BASE_URL || "/freshcart-ecommerce/";
 // const baseURL = process.env.REACT_APP_BASE_URL || "/freshcart-ecommerce/";
 
 let routers = createBrowserRouter([{
-  path:'' , element : <Layout/>,children:[
+  path:'/' , element : <Layout/>,children:[
     {path:'register' , element: <Register/>},
     {path:'login' , element: <Login/>},
     {index:true , element: <ProtetedRoute><Home/></ProtetedRoute> },
