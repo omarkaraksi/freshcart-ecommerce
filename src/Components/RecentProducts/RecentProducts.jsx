@@ -43,7 +43,7 @@ let {addProductToCart,cart} = useContext(CartContext)
     {isLoading ? <Loading/> : 
         <div className='flex flex-wrap justify-center py-8 mx-auto gap-y-4 '>
           {data.map((product, index)=> 
-            <div className='w-1/6 ' key={index}>
+            <div className='w-full md:w-1/3 lg:w-1/5 xl:w-1/6' key={index}>
 
                 <div className='p-2 m-2 rounded-lg shadow-lg product'>
                 <Link to={`/products/${product._id}`}  >
